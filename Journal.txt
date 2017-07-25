@@ -1,1 +1,14 @@
 23/07/17 -> Saif : page d'acceuil + bootsrap +contact. Adonis->  Formulaire pour devis, html +js
+
+
+25/07/17
+-> Saif : barre de navigation faite 
+
+	reste à faire : autres pages copier/coller plus on attend les images de ahmed et les infos sponspors ect
+
+
+-> Ado: formulaire fait 
+
+	reste à faire: css+ fonctions java script
+
+Point à faire à la fin de la semaine.
