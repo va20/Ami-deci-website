@@ -1,5 +1,5 @@
 p {
-  margin-top: 15 px;
+  margin-top: 15px ;
   padding: 10px;
 }
 
@@ -11,7 +11,7 @@ fieldset {
 }
 
 legend {
-  padding: 0px 3px;
+  padding: 0 3px;
   font-weight: bold;
   font-variant: small-caps;
 }
