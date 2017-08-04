@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Theme Made By www.w3schools.com - No Copyright -->
-    <title>Bootstrap Theme Company Page</title>
+    <title>Ami Deco</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
@@ -23,14 +22,14 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#myPage">Logo</a>
+            <a class="navbar-brand" href="Homepage.html">Logo</a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="#about">ABOUT</a></li>
                 <li><a href="#services">SERVICES</a></li>
-                <li><a href="#portfolio">PORTFOLIO</a></li>
-                <li><a href="#pricing">PRICING</a></li>
+                <li><a href="#portfolio">GALLERY</a></li>
+                <li><a href="#pricing">DEVIS</a></li>
                 <li><a href="#contact">CONTACT</a></li>
             </ul>
         </div>
@@ -49,7 +48,7 @@
             <h2>About Company Page</h2><br>
             <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4><br>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <br><button class="btn btn-default btn-lg">Get in Touch</button>
+            <br><a class="btn btn-default btn-lg" href="#contact"> Contactez-nous </a>
         </div>
         <div class="col-sm-4">
             <span class="glyphicon glyphicon-signal logo"></span>
@@ -115,33 +114,26 @@
 
 <!-- Container (Portfolio Section) -->
 <div id="portfolio" class="container-fluid text-center bg-grey">
-    <h2>Portfolio</h2><br>
-    <h4>What we have created</h4>
+    <h2>Gellery</h2><br>
+    <h4>Ce que nous avons réalisé</h4>
     <div class="row text-center slideanim">
         <div class="col-sm-4">
             <div class="thumbnail">
-                <img src="../src/unnamed%20(1).jpg" alt="Paris" width="400" height="300">
-                <p><strong>Paris</strong></p>
-                <p>Yes, we built Paris</p>
+                <img src="../src/unnamed%20(1).jpg" width="400" height="300">
             </div>
         </div>
         <div class="col-sm-4">
             <div class="thumbnail">
-                <img src="../src/unnamed%20(2).jpg" alt="New York" width="400" height="300">
-                <p><strong>New York</strong></p>
-                <p>We built New York</p>
+                <img src="../src/unnamed%20(2).jpg" width="400" height="300">
             </div>
         </div>
         <div class="col-sm-4">
             <div class="thumbnail">
-                <img src="../src/unnamed%20(3).jpg" alt="San Francisco" width="400" height="300">
-                <p><strong>San Francisco</strong></p>
-                <p>Yes, San Fran is ours</p>
+                <img src="../src/unnamed%20(3).jpg" width="400" height="300">
             </div>
         </div>
     </div><br>
 
-    <h2>What our customers say</h2>
     <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
@@ -149,20 +141,20 @@
             <li data-target="#myCarousel" data-slide-to="1"></li>
             <li data-target="#myCarousel" data-slide-to="2"></li>
         </ol>
-
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
             <div class="item active">
-                <img src="../src/unnamed%20(3).jpg" alt="San Francisco" width="400" height="300">
+                <img class="center-block" src="../src/unnamed%20(1).jpg" width="400" height="300">
             </div>
             <div class="item">
-                <img src="../src/unnamed%20(3).jpg" alt="San Francisco" width="400" height="300">
+                <img class="center-block" src="../src/unnamed%20(3).jpg" width="400" height="300">
             </div>
             <div class="item">
-                <img src="../src/unnamed%20(3).jpg" alt="San Francisco" width="400" height="300">
+                <img class="center-block" src="../src/unnamed%20(23).jpg" width="400" height="300">
             </div>
         </div>
-
+        <br>
+        <br>
         <!-- Left and right controls -->
         <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
             <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
@@ -173,69 +165,28 @@
             <span class="sr-only">Next</span>
         </a>
     </div>
+    <br>
+    <a class="btn btn-default btn-lg" href="Gallery.html"> See more </a>
 </div>
 
 <!-- Container (Pricing Section) -->
 <div id="pricing" class="container-fluid">
     <div class="text-center">
-        <h2>Pricing</h2>
-        <h4>Choose a payment plan that works for you</h4>
+        <h2>Devis</h2>
+        <h4>Envie de faire un devis, c'est gratuit.</h4>
     </div>
     <div class="row slideanim">
         <div class="col-sm-4 col-xs-12">
             <div class="panel panel-default text-center">
                 <div class="panel-heading">
-                    <h1>Basic</h1>
-                </div>
-                <div class="panel-body">
-                    <p><strong>20</strong> Lorem</p>
-                    <p><strong>15</strong> Ipsum</p>
-                    <p><strong>5</strong> Dolor</p>
-                    <p><strong>2</strong> Sit</p>
-                    <p><strong>Endless</strong> Amet</p>
-                </div>
-                <div class="panel-footer">
-                    <h3>$19</h3>
-                    <h4>per month</h4>
-                    <button class="btn btn-lg">Sign Up</button>
+                    <h1>Devis rapide</h1>
                 </div>
             </div>
         </div>
         <div class="col-sm-4 col-xs-12">
             <div class="panel panel-default text-center">
                 <div class="panel-heading">
-                    <h1>Pro</h1>
-                </div>
-                <div class="panel-body">
-                    <p><strong>50</strong> Lorem</p>
-                    <p><strong>25</strong> Ipsum</p>
-                    <p><strong>10</strong> Dolor</p>
-                    <p><strong>5</strong> Sit</p>
-                    <p><strong>Endless</strong> Amet</p>
-                </div>
-                <div class="panel-footer">
-                    <h3>$29</h3>
-                    <h4>per month</h4>
-                    <button class="btn btn-lg">Sign Up</button>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-4 col-xs-12">
-            <div class="panel panel-default text-center">
-                <div class="panel-heading">
-                    <h1>Premium</h1>
-                </div>
-                <div class="panel-body">
-                    <p><strong>100</strong> Lorem</p>
-                    <p><strong>50</strong> Ipsum</p>
-                    <p><strong>25</strong> Dolor</p>
-                    <p><strong>10</strong> Sit</p>
-                    <p><strong>Endless</strong> Amet</p>
-                </div>
-                <div class="panel-footer">
-                    <h3>$49</h3>
-                    <h4>per month</h4>
-                    <button class="btn btn-lg">Sign Up</button>
+                    <h1>Devis détaillé</h1>
                 </div>
             </div>
         </div>
@@ -247,7 +198,7 @@
     <h2 class="text-center">CONTACT</h2>
     <div class="row">
         <div class="col-sm-5 center-block">
-            <p>Contact us and we'll get back to you within 24 hours.</p>
+            <p>Nos coordonnées:</p>
             <p><span class="glyphicon glyphicon-map-marker"></span> 72, rue de Rome 75008 Paris</p>
             <p><span class="glyphicon glyphicon-phone"></span> 06 20 71 74 08</p>
             <p><span class="glyphicon glyphicon-phone"></span> 06 69 77 37 86</p>
@@ -270,17 +221,21 @@
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYJlzVYlUNHtDvnrxLVPc3yCm6TRtR6ws&callback=myMap"></script>
 
-<!--
-To use this code on your website, get a free API key from Google.
-Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
--->
-
 <footer class="container-fluid text-center">
+    <div class="container">
+        <a href='#'><i class="fa fa-twitch fa-3x fa-fw"></i></a>
+        <a href='#'><i class="fa fa-facebook fa-3x fa-fw"></i></a>
+        <a href='#'><i class="fa fa-twitter fa-3x fa-fw"></i></a>
+        <a href='#'><i class="fa fa-youtube-play fa-3x fa-fw"></i></a>
+        <a href='#'><i class="fa fa-rss fa-3x fa-fw"></i></a>
+        <a href='#'><i class="fa fa-vine fa-3x fa-fw"></i></a>
+        <a href='#'><i class="fa fa-flickr fa-3x fa-fw"></i></a>
+        <a href='#'><i class="fa fa-linkedin fa-3x fa-fw"></i></a>
+    </div>
     <a href="#myPage" title="To Top">
         <span class="glyphicon glyphicon-chevron-up"></span>
     </a>
 </footer>
-
 <script>
     $(document).ready(function(){
         // Add smooth scrolling to all links in navbar + footer link
@@ -317,6 +272,5 @@ Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
         });
     })
 </script>
-
 </body>
 </html>
