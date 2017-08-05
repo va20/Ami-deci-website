@@ -1,236 +1,244 @@
-<!doctype html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Ami Deco</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="../css/style.css" rel="stylesheet" type="text/css">
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
 
-<html lang="fr">
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="Homepage.html">Logo</a>
+    </div>
+  </div>
+</nav>
 
-  <head>
+<div class="jumbotron text-center">
+  <h1>AMI DECO</h1>
+  <p>Nous sommes spécialisés dans ....</p>
+</div>
+    <div class="container">
+      <div class="col-md-5">
+        <div class="form-area">
+          <form>
+            <br style="clear:both">
+            <h4 style="margin-bottom: 25px; text-align: center;"><i>Complétez le formulaire. Les champs marqués par </i><em>* </em> sont <em>obligatoires.</em></h4>
+            <div class="form-group">
+              <input class="form-control" id="name" name="name" placeholder="Nom" required>
+            </div>
+            <div class="form-group">
+              <input class="form-control" id="mail" name="mail" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+              <input class="form-control" id="mobile" name="mobile" placeholder="Numéro" required>
+            </div>
+            <div class="col-md-7 center-block">
+              <button type="button" id="submit" name="submit" class="btn btn-primary pull-right" style="background-color: darkred">Envoyer</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!--><script src="../js/scripts.js"></script>
 
-    <meta charset="utf-8">
-    <title> Devis Personnalisé </title>
-    <meta name="description" content="The HTML5 Herald">
-    <meta name="author" content="SitePoint">
-    <!--> <link rel="stylesheet" href="../css/form.css"> <-->
-
-  </head>
-
-  <body>
-
-    <!--> <script src="../js/scripts.js"></script>
-    <h2> Devis personnalisé </h2>
-    <p><i>Complétez le formulaire. Les champs marqués par </i><em>*</em> sont <em>obligatoires.</em></p>
-
-
-    <fieldset>
-      <legend>Contact</legend>
-      <label for="nom">Nom <em>*</em></label>
-    <!--  //placeholder: indication grisée
-      //required: il faut renseigner le champs sinon la validation est bloquée
-      //autofocus: le curseur est positionné dans cette case au chargement de la page-->
-      <input id="nom" placeholder="Jean Dupond" autofocus="" required=""><br>
-      <label for="telephone">Portable</label>
-    <!--  // type="tel": bascule le clavier sur un smartphone
-      // pattern: expression régulière à vérifier pour pouvoir valider-->
-      <input id="telephone" type="tel" placeholder="06xxxxxxxx" pattern="06[0-9]{8}"><br>
-      <label for="email">Email <em>*</em></label>
-      <input id="email" type="email" placeholder="prenom.nom@domaine.fr" required="" pattern="[a-zA-Z]*@[a-zA-Z]*.[a-zA-Z]*"><br>
-    </fieldset>
-
+    <div class="container">
+      <div class="row">
     <fieldset>
       <legend> Travaux à faire </legend>
-      <div id="1">
-        <input type="checkbox" id="1" value="checkbox1" onclick="ajoutPieces">
-        <label for="1">
-          <h4> 1- TRAVAUX SUR PLACO NEUF </h4>
-            <ul>
-                <li> Application d'une couche impression </li>
-                <li> Application de deux couches d'enduit(gros, fin). Ponçage </li>
-                <li> Application d'une couche d'impression </li>
-                <li> Application de deux couches de peinture acrylique </li>
-            </ul>
+      <div class="checkbox">
+        <label for="1"><input type="checkbox" id="1" value="checkbox1" onclick="ajoutPieces">
+          TRAVAUX SUR PLACO NEUF
         </label>
+        <ul>
+          <li> Application d'une couche impression </li>
+          <li> Application de deux couches d'enduit(gros, fin). Ponçage </li>
+          <li> Application d'une couche d'impression </li>
+          <li> Application de deux couches de peinture acrylique </li>
+          </ul>
       </div>
 
 
 
-      <div id="2">
-        <input type="checkbox" id="2" value="checkbox1">
-        <label for="2">
-          <h4> 2- TRAVAUX DE PEINTURE SUR ANCIENS MURS PEU ABIMES </h4>
-            <ul>
-                <li> Lessivage, ouverture des fissures </li>
-                <li> Application d'une couche d'impression </li>
-                <li> Rebouchage à l'enduit plâtre et pose de bandes Calicot </li>
-                <li> Application de deux couches de peinture acrylique </li>
-            </ul>
+      <div class="checkbox">
+        <label for="2"><input type="checkbox" id="2" value="checkbox2">
+          TRAVAUX DE PEINTURE SUR ANCIENS MURS PEU ABIMES
         </label>
+          <ul>
+            <li> Lessivage, ouverture des fissures </li>
+            <li> Application d'une couche d'impression </li>
+            <li> Rebouchage à l'enduit plâtre et pose de bandes Calicot </li>
+            <li> Application de deux couches de peinture acrylique </li>
+          </ul>
+
       </div>
 
 
 
-      <div id ="3">
-        <input type="checkbox" id="3" value="checkbox1">
+      <div class="checkbox">
         <label for="3">
-          <h4> 3- TRAVAUX DE PEINTURE SUR ANCIENS MURS TRÈS ABIMÉS </h4>
-            <ul>
-                <li> Lessivage, ouverture des fissures </li>
-                <li> Application d'une couche d'impression </li>
-                <li> Rebouchage à l'enduit plâtre et pose de Voile de verre </li>
-                <li> Application d'une couche d'impression </li>
-                <li> Application de deux couches d'enduit(gros, fin). Ponçage </li>
-                <li> Application d'une couche d'impression </li>
-                <li> Application de deux couches de peinture acrylique </li>
-            </ul>
+          <input type="checkbox" id="3" value="checkbox3">TRAVAUX DE PEINTURE SUR ANCIENS MURS TRÈS ABIMÉS
         </label>
+        <ul>
+          <li> Lessivage, ouverture des fissures </li>
+          <li> Application d'une couche d'impression </li>
+          <li> Rebouchage à l'enduit plâtre et pose de Voile de verre </li>
+          <li> Application d'une couche d'impression </li>
+          <li> Application de deux couches d'enduit(gros, fin). Ponçage </li>
+          <li> Application d'une couche d'impression </li>
+          <li> Application de deux couches de peinture acrylique </li>
+        </ul>
       </div>
 
 
 
-      <div id="4">
-        <input type="checkbox" id="4" value="checkbox1">
+      <div class="checkbox">
         <label for ="4">
-          <h4> 4- TRAVAUX DE PEINTURE AVEC TOILES DE VERRE À PEINDRE </h4>
-            <ul>
-                <li> Lessivage, ouverture des fissures </li>
-                <li> Application d'une couche d'impression </li>
-                <li> Rebouchage à l'enduit plâtre et pose de toile de verre </li>
-                <li> Application d'une couche d'impression </li>
-                <li> Application de deux couches de peinture acrylique </li>
-            </ul>
+          <input type="checkbox" id="4" value="checkbox4">TRAVAUX DE PEINTURE AVEC TOILES DE VERRE À PEINDRE
         </label>
+        <ul>
+          <li> Lessivage, ouverture des fissures </li>
+          <li> Application d'une couche d'impression </li>
+          <li> Rebouchage à l'enduit plâtre et pose de toile de verre </li>
+          <li> Application d'une couche d'impression </li>
+          <li> Application de deux couches de peinture acrylique </li>
+        </ul>
       </div>
 
 
 
-      <div id="5">
-        <input type="checkbox" id="5" value="checkbox1">
+      <div class="checkbox">
         <label for="5">
-          <h4> 5- STUK </h4>
+          <input type="checkbox" id="5" value="checkbox5">
+          STUK
         </label>
       </div>
 
 
 
-      <div id="6">
-        <input type="checkbox" id="6" value="checkbox1">
+      <div class="checkbox">
         <label for="6">
-          <h4> 6-AREZZO SIMPLE </h4>
+          <input type="checkbox" id="6" value="checkbox6">AREZZO SIMPLE
         </label>
       </div>
 
 
 
-      <div id="7">
-        <input type="checkbox" id="7" value="checkbox1">
+      <div class="checkbox">
         <label for="7">
-          <h4> 7-AREZZO EFFET BETON </h4>
+          <input type="checkbox" id="7" value="checkbox7">AREZZO EFFET BETON
         </label>
       </div>
 
 
 
-      <div id="8">
-        <input type="checkbox" id="8" value="checkbox1">
+      <div class="checkbox">
         <label for="8">
-          <h4> 8-PEINTURE SUR PARPIN  </h4>
+          <input type="checkbox" id="8" value="checkbox8">PEINTURE SUR PARPIN
         </label>
       </div>
 
 
 
 
-      <div id="9">
-        <input type="checkbox" id="9" value="checkbox1">
+      <div class="checkbox">
         <label for="9">
-          <h4> 9-PEINTURE DES SOLS </h4>
+          <input type="checkbox" id="9" value="checkbox9">PEINTURE DES SOLS
         </label>
       </div>
 
 
 
-      <div id="10">
-        <input type="checkbox" id="10" value="checkbox1">
+      <div class="checkbox">
         <label for ="10">
-          <h4> 10-PEINTURE SUR TAILLE DE VERRE DÉJA POSÉ </h4>
+          <input type="checkbox" id="10" value="checkbox10">PEINTURE SUR TAILLE DE VERRE DÉJA POSÉ
         </label>
       </div>
 
 
 
-      <div id="11">
-        <input type="checkbox" id="11" value="checkbox1">
+      <div class="checkbox">
         <label for ="11">
-          <h4> 11- POSE BANDES FOURNITURE ET POSE </h4>
+          <input type="checkbox" id="11" value="checkbox11">
+            POSE BANDES FOURNITURE ET POSE
         </label>
       </div>
 
 
 
 
-      <div id="12">
-        <input type="checkbox" id="12" value="checkbox1">
+      <div class="checkbox">
         <label for="12">
-          <h4> 12-PARQUET </h4>
-            <ul>
-              <li> PONÇAGE</li>
-              <li> DEUX COUCHES VERNIS </li>
-            </ul>
-       </label>
+          <input type="checkbox" id="12" value="checkbox12">PARQUET
+        </label>
+        <ul>
+          <li> PONÇAGE</li>
+          <li> DEUX COUCHES VERNIS </li>
+        </ul>
       </div>
 
 
 
-      <div id="13">
-        <input type="checkbox" id="13" value="checkbox1">
+      <div class="checkbox">
         <label for="13">
-          <h4> 13-PORTES </h4>
+          <input type="checkbox" id="13" value="checkbox13">PORTES
         </label>
       </div>
 
 
 
-      <div id="14">
-        <input type="checkbox" id="14" value="checkbox1">
+      <div class="checkbox">
         <label for="14">
-          <h4> 14-FENÊTRES </h4>
+          <input type="checkbox" id="14" value="checkbox14">FENÊTRES
         </label>
       </div>
 
 
 
-      <div id="15">
-        <input type="checkbox" id="15" value="checkbox1">
+      <div class="checkbox">
         <label for="15">
-          <h4> 15-RADIATEUR </h4>
+          <input type="checkbox" id="15" value="checkbox1">RADIATEUR
         </label>
       </div>
 
 
 
-      <div id="16">
-        <input type="checkbox" id="16" value="checkbox1">
+      <div class="checkbox">
         <label for="16">
-          <h4> 16- TRAVAUX DE PEINTURE SUR FAÇADES EXTÈRIEURES </h4>
-            <ul>
-              <li> Carcher </li>
-              <li> Ouvertures Fissures </li>
-              <li> Impression </li>
-              <li> Rebouchage </li>
-              <li> Deux couches peinture </li>
-            </ul>
+          <input type="checkbox" id="16" value="checkbox1">TRAVAUX DE PEINTURE SUR FAÇADES EXTÈRIEURES
         </label>
+        <ul>
+          <li> Carcher </li>
+          <li> Ouvertures Fissures </li>
+          <li> Impression </li>
+          <li> Rebouchage </li>
+          <li> Deux couches peinture </li>
+        </ul>
       </div>
     </fieldset>
 
 
-  <!--
-         <label for="pseudo">Votre pseudo :</label>
-         <input type="text" name="pseudo" id="pseudo" />
+    <!--
+           <label for="pseudo">Votre pseudo :</label>
+           <input type="text" name="pseudo" id="pseudo" />
 
-         <br />
-         <label for="pass">Votre mot de passe :</label>
-         <input type="password" name="pass" id="pass" />
-  -->
-     </p>
-  </form>
-
+           <br />
+           <label for="pass">Votre mot de passe :</label>
+           <input type="password" name="pass" id="pass" />
+    -->
+      </div>
+    </div>
 </body>
 </html>
