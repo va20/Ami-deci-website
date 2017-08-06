@@ -30,15 +30,13 @@
   <h1>AMI DECO</h1>
   <p> Les spécialistes de la peinture </p>
 </div>
-    
-    <script src="../js/scripts.js"></script>
+
 
     <div class="container">
       <div class="row">
-    <fieldset>
       <legend> Travaux à faire </legend>
       <div class="checkbox">
-        <label for="1"><input type="checkbox" id="1" value="checkbox1" onclick="ajoutPieces">
+        <label for="1"><input type="checkbox" id="1" value="1">
           TRAVAUX SUR PLACO NEUF
         </label>
         <ul>
@@ -52,7 +50,7 @@
 
 
       <div class="checkbox">
-        <label for="2"><input type="checkbox" id="2" value="checkbox2">
+        <label for="2"><input type="checkbox" id="2" value="2">
           TRAVAUX DE PEINTURE SUR ANCIENS MURS PEU ABIMES
         </label>
           <ul>
@@ -68,7 +66,7 @@
 
       <div class="checkbox">
         <label for="3">
-          <input type="checkbox" id="3" value="checkbox3">TRAVAUX DE PEINTURE SUR ANCIENS MURS TRÈS ABIMÉS
+          <input type="checkbox" id="3" value="3">TRAVAUX DE PEINTURE SUR ANCIENS MURS TRÈS ABIMÉS
         </label>
         <ul>
           <li> Lessivage, ouverture des fissures </li>
@@ -85,7 +83,7 @@
 
       <div class="checkbox">
         <label for ="4">
-          <input type="checkbox" id="4" value="checkbox4">TRAVAUX DE PEINTURE AVEC TOILES DE VERRE À PEINDRE
+          <input type="checkbox" id="4" value="4">TRAVAUX DE PEINTURE AVEC TOILES DE VERRE À PEINDRE
         </label>
         <ul>
           <li> Lessivage, ouverture des fissures </li>
@@ -97,116 +95,48 @@
       </div>
 
 
-
-      <div class="checkbox">
-        <label for="5">
-          <input type="checkbox" id="5" value="checkbox5">
-          STUK
+      <div class="surface">
+        <label for ="surf">
+          <input type="number" id="num" placeholder="123,456" pattern="^[0-9]*,[0-9]$"  required=""  min="0" onclick="verif"> Surface(en m2):
         </label>
-      </div>
+
+      <div class="calcul">
+
+      <input type="button" value="Calcul" onclick="calculSurface();" />
+
+
+        <script>
+            function calculSurface() {
+              var selection = document.querySelectorAll('input[type=checkbox]');
+
+              console.log(selection);
+
+              if (selection.length==0) {
+                alert('Vous n\'avez rien coché!');
+              }
+              /*  var ips = document.getElementsByTagName('input'),
+                    ipsL = inputs.length;
+                var total=0;
+                var cpt
+
+                for (var i = 0; i < ipsL; i++) {
+                    if (ips[i].type === 'checkbox' && ips[i].checked) {
+                        switch (ips[i]) {
+                          case 1 :
+                            total=
+
+                            break;
+                          default:
+
+                        }
+                        alert('La case cochée est la n°' + inputs[i].value);
+                    }
+                }*/
+            }
+        </script>
 
 
 
-      <div class="checkbox">
-        <label for="6">
-          <input type="checkbox" id="6" value="checkbox6">AREZZO SIMPLE
-        </label>
-      </div>
-
-
-
-      <div class="checkbox">
-        <label for="7">
-          <input type="checkbox" id="7" value="checkbox7">AREZZO EFFET BETON
-        </label>
-      </div>
-
-
-
-      <div class="checkbox">
-        <label for="8">
-          <input type="checkbox" id="8" value="checkbox8">PEINTURE SUR PARPIN
-        </label>
-      </div>
-
-
-
-
-      <div class="checkbox">
-        <label for="9">
-          <input type="checkbox" id="9" value="checkbox9">PEINTURE DES SOLS
-        </label>
-      </div>
-
-
-
-      <div class="checkbox">
-        <label for ="10">
-          <input type="checkbox" id="10" value="checkbox10">PEINTURE SUR TAILLE DE VERRE DÉJA POSÉ
-        </label>
-      </div>
-
-
-
-      <div class="checkbox">
-        <label for ="11">
-          <input type="checkbox" id="11" value="checkbox11">
-            POSE BANDES FOURNITURE ET POSE
-        </label>
-      </div>
-
-
-
-
-      <div class="checkbox">
-        <label for="12">
-          <input type="checkbox" id="12" value="checkbox12">PARQUET
-        </label>
-        <ul>
-          <li> PONÇAGE</li>
-          <li> DEUX COUCHES VERNIS </li>
-        </ul>
-      </div>
-
-
-
-      <div class="checkbox">
-        <label for="13">
-          <input type="checkbox" id="13" value="checkbox13">PORTES
-        </label>
-      </div>
-
-
-
-      <div class="checkbox">
-        <label for="14">
-          <input type="checkbox" id="14" value="checkbox14">FENÊTRES
-        </label>
-      </div>
-
-
-
-      <div class="checkbox">
-        <label for="15">
-          <input type="checkbox" id="15" value="checkbox1">RADIATEUR
-        </label>
-      </div>
-
-
-
-      <div class="checkbox">
-        <label for="16">
-          <input type="checkbox" id="16" value="checkbox1">TRAVAUX DE PEINTURE SUR FAÇADES EXTÈRIEURES
-        </label>
-        <ul>
-          <li> Carcher </li>
-          <li> Ouvertures Fissures </li>
-          <li> Impression </li>
-          <li> Rebouchage </li>
-          <li> Deux couches peinture </li>
-        </ul>
-      </div>
-    </fieldset>
 
       </div>
     </div>
