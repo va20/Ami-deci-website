@@ -97,41 +97,64 @@
 
       <div class="surface">
         <label for ="surf">
-          <input type="number" id="num" placeholder="123,456" pattern="^[0-9]*,[0-9]$"  required=""  min="0" onclick="verif"> Surface(en m2):
+          <input type="text" onkeypress='return event.charCode >= 48 && event.charCode <= 57' id="num" placeholder="123"  required="">
+          </input> Surface(en m2):
         </label>
+
+
 
       <div class="calcul">
 
-      <input type="button" value="Calcul" onclick="calculSurface();" />
+      <input type="button" value="Calcul" onclick="calculSurface();">
+    </input>
+
 
 
         <script>
+
             function calculSurface() {
-              var selection = document.querySelectorAll('input[type=checkbox]');
-
+              var selection = document.querySelectorAll('input[type=checkbox]:checked');
               console.log(selection);
+              var surface= document.getElementById('num').value;
+              console.log("surface:",surface);
+              var ips = document.getElementsByTagName('input'),
+              ipsL = ips.length;
 
-              if (selection.length==0) {
+              if(surface.length===0){
+                alert('Veuillez indiquer une surface!');
+              }
+
+              if (selection.length===0) {
                 alert('Vous n\'avez rien coché!');
               }
-              /*  var ips = document.getElementsByTagName('input'),
-                    ipsL = inputs.length;
-                var total=0;
-                var cpt
+
+
+              var total=0;
+
+
 
                 for (var i = 0; i < ipsL; i++) {
                     if (ips[i].type === 'checkbox' && ips[i].checked) {
-                        switch (ips[i]) {
+                      switch (ips[i].value) {
+                          console.log("je passe la");
                           case 1 :
-                            total=
-
+                            total=total+surface*22;
                             break;
-                          default:
+                          case 2:
+                           total=total+surface*23;
+                           console.log('je suis la',total);
+                           break;
+                          case 3:
+                            total=total+surface*40;
+                            break;
+                          case 4:
+                            total=total+surface*22;
+                            break;
+                         }
 
-                        }
-                        alert('La case cochée est la n°' + inputs[i].value);
-                    }
-                }*/
+                  }
+                  console.log(total);
+              }
             }
         </script>
 
