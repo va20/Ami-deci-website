@@ -114,10 +114,8 @@
 
             function calculSurface() {
               var selection = document.querySelectorAll('input[type=checkbox]:checked');
-              console.log(selection);
               var surface= document.getElementById('num').value;
-              console.log("surface:",surface);
-              var ips = document.getElementsByTagName('input'),
+              var ips = document.getElementsByTagName('input');
               ipsL = ips.length;
 
               if(surface.length===0){
@@ -131,12 +129,10 @@
 
               var total=0;
 
-
-
-                for (var i = 0; i < ipsL; i++) {
+              for (var i = 0; i < ipsL; i++) {
                     if (ips[i].type === 'checkbox' && ips[i].checked) {
-                      switch (ips[i].value) {
-                          console.log("je passe la");
+
+                      switch (parseInt(ips[i].value)) {
                           case 1 :
                             total=total+surface*22;
                             break;
@@ -154,7 +150,9 @@
 
                   }
                   console.log(total);
-              }
+                }
+                
+
             }
         </script>
 
