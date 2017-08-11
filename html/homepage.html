@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/footer.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
     <link href="../css/style.css" rel="stylesheet" type="text/css">
     <script src="../js/jquery.min.js"></script>
@@ -21,7 +23,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="Homepage.html">Logo</a>
+            <a class="navbar-brand" href="homepage.html">Logo</a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">
@@ -46,7 +48,7 @@
         <div class="col-sm-8">
             <h2>A propos de nous</h2><br>
             <h4> AMI DECO est aujourd'hui l'une des entreprises de travaux de peinture les plus renommées. Forte de son expèrience, aussi bien chez les particuliers que dans
-              de prestigieuses enseignes, AMI DECO est synonyme de qualité et de confiance qui font d'elle un des leaders incontournable du marché.
+                de prestigieuses enseignes, AMI DECO est synonyme de qualité et de confiance qui font d'elle un des leaders incontournable du marché.
             </h4><br>
             <br><a class="btn btn-default btn-lg" href="#contact"> Contactez-nous </a>
         </div>
@@ -115,23 +117,6 @@
 <div id="gallerie" class="container-fluid text-center bg-grey">
     <h2>Galerie</h2><br>
     <h4>Ce que nous avons réalisé</h4>
-    <div class="row text-center slideanim">
-        <div class="col-sm-4">
-            <div class="thumbnail">
-                <img src="../src/unnamed%20(1).jpg" width="500" height="667">
-            </div>
-        </div>
-        <div class="col-sm-4">
-            <div class="thumbnail">
-                <img src="../src/unnamed%20(2).jpg" width="500" height="667">
-            </div>
-        </div>
-        <div class="col-sm-4">
-            <div class="thumbnail">
-                <img src="../src/unnamed%20(3).jpg" width="500" height="667">
-            </div>
-        </div>
-    </div><br>
 
     <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
         <!-- Indicators -->
@@ -165,7 +150,7 @@
         </a>
     </div>
     <br>
-    <a class="btn btn-default btn-lg" href="Gallery.html"> See more </a>
+    <a class="btn btn-default btn-lg" href="gallery.html"> See more </a>
 </div>
 
 <!-- Container (Pricing Section) -->
@@ -196,14 +181,14 @@
 <div id="contact" class="container-fluid bg-grey">
     <h2 class="text-center">CONTACT</h2>
     <div class="row">
-        <div class="col-sm-5 center-block">
+        <div class="col-sm-3 center-block">
             <p>Nos coordonnées: </p>
             <p><span class="glyphicon glyphicon-map-marker"></span> 72, rue de Rome 75008 Paris</p>
             <p><span class="glyphicon glyphicon-phone"></span> 06 20 71 74 08</p>
             <p><span class="glyphicon glyphicon-phone"></span> 06 69 77 37 86</p>
-            <p><span class="glyphicon glyphicon-envelope"></span> ami.deco2@gmail.com</p>
+            <p><span class="glyphicon glyphicon-envelope"></span> amideco2@gmail.com</p>
         </div>
-        <div id="googleMap" style="height:400px;width:50%;"></div>
+        <div class="col-sm-9" id="googleMap" style="height:400px;width:50%;"></div>
     </div>
 </div>
 
@@ -219,21 +204,14 @@
     }
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYJlzVYlUNHtDvnrxLVPc3yCm6TRtR6ws&callback=myMap"></script>
-
-<footer class="container-fluid text-center">
-    <div class="container">
-        <a href='#'><i class="fa fa-twitch fa-3x fa-fw"></i></a>
-        <a href='#'><i class="fa fa-facebook fa-3x fa-fw"></i></a>
-        <a href='#'><i class="fa fa-twitter fa-3x fa-fw"></i></a>
-        <a href='#'><i class="fa fa-youtube-play fa-3x fa-fw"></i></a>
-        <a href='#'><i class="fa fa-rss fa-3x fa-fw"></i></a>
-        <a href='#'><i class="fa fa-vine fa-3x fa-fw"></i></a>
-        <a href='#'><i class="fa fa-flickr fa-3x fa-fw"></i></a>
-        <a href='#'><i class="fa fa-linkedin fa-3x fa-fw"></i></a>
+<footer>
+    <div class="container-fluid bg-primary">
+        <div class="text-center center-block">
+            <a href="https://www.facebook.com"><i id="fb" class="fa fa-facebook-square fa-5x social" aria-hidden="true"></i></a>
+            <a href="https://plus.google.com"><i id="social-gp" class="fa fa-google-plus-square fa-5x social"></i></a>
+            <a href="mailto:amideco2@gmail.com"><i id="social-em" class="fa fa-envelope-square fa-5x social"></i></a>
+        </div>
     </div>
-    <a href="#myPage" title="To Top">
-        <span class="glyphicon glyphicon-chevron-up"></span>
-    </a>
 </footer>
 <script>
     $(document).ready(function(){
