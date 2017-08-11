@@ -106,6 +106,7 @@
       <div class="calcul">
 
       <input type="button" value="Calcul" onclick="calculSurface();">
+      <div id="resultat"  style="display:none;" class="resultat" > Voici votre estimation :</div>
     </input>
 
 
@@ -151,7 +152,7 @@
                   }
                   console.log(total);
                 }
-                
+                document.getElementById('resultat').style.display = total.toString();
 
             }
         </script>
