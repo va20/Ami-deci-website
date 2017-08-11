@@ -84,7 +84,7 @@ h4 {
     color: #fff !important;
     background-color: darkred !important;
     padding: 25px;
-    border-bottom: 1px solid transparent;
+    border-bottom: 0px solid transparent;
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
     border-bottom-left-radius: 0px;
@@ -115,6 +115,7 @@ h4 {
     letter-spacing: 4px;
     border-radius: 0;
     font-family: Montserrat, sans-serif;
+    height: 30px;
 }
 .navbar li a, .navbar .navbar-brand {
     color: #fff !important;
