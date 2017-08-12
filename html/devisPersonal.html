@@ -12,6 +12,8 @@
   <link href="../css/style.css" rel="stylesheet" type="text/css">
   <script src="../js/jquery.min.js"></script>
   <script src="../js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="calculs.js"></script>
+
 
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
@@ -42,35 +44,14 @@
         <p> Les spécialistes de la peinture </p>
     </a>
 </div>
-    <div class="container">
-      <div class="col-md-5">
-        <div class="form-area">
-          <form>
-            <br style="clear:both">
-            <h4 style="margin-bottom: 25px; text-align: center;"><i>Complétez le formulaire. Les champs marqués par </i><em>* </em> sont <em>obligatoires.</em></h4>
-            <div class="form-group">
-              <input class="form-control" id="name" name="name" placeholder="Nom" required="" >
-            </div>
-            <div class="form-group">
-              <input class="form-control" id="mail" name="mail" placeholder="Email" required="">
-            </div>
-            <div class="form-group">
-              <input class="form-control" id="mobile" name="mobile" placeholder="Numéro" required="">
-            </div>
-            <div class="col-md-7 center-block">
-              <button type="button" id="submit" name="submit" class="btn btn-primary pull-right" style="background-color: darkred">Envoyer</button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-    <script src="../js/scripts.js"></script>
+
+
 
     <div class="container">
       <div class="row">
       <legend> Travaux à faire </legend>
       <div class="checkbox">
-        <label for="1"><input type="checkbox" id="1" value="checkbox1" onclick="ajoutPieces">
+        <label for="1"><input type="checkbox" id="1" value="1" onchange="ajoutSurfaces(this,'s1');">
           TRAVAUX SUR PLACO NEUF
         </label>
         <ul>
@@ -79,12 +60,13 @@
           <li> Application d'une couche d'impression </li>
           <li> Application de deux couches de peinture acrylique </li>
           </ul>
+           <input type='number' step="0.1" id='s1' placeholder='Surface(en m2):' required='' style="display: none;">
       </div>
 
 
 
       <div class="checkbox">
-        <label for="2"><input type="checkbox" id="2" value="checkbox2">
+        <label for="2"><input type="checkbox" id="2" value="2" onchange="ajoutSurfaces(this,'s2');">
           TRAVAUX DE PEINTURE SUR ANCIENS MURS PEU ABIMES
         </label>
           <ul>
@@ -93,14 +75,14 @@
             <li> Rebouchage à l'enduit plâtre et pose de bandes Calicot </li>
             <li> Application de deux couches de peinture acrylique </li>
           </ul>
-
+          <input type='number' step="0.1" id='s2' placeholder='Surface(en m2):' required='' style="display: none;">
       </div>
 
 
 
       <div class="checkbox">
         <label for="3">
-          <input type="checkbox" id="3" value="checkbox3">TRAVAUX DE PEINTURE SUR ANCIENS MURS TRÈS ABIMÉS
+          <input type="checkbox" id="3" value="3" onchange="ajoutSurfaces(this,'s3');">TRAVAUX DE PEINTURE SUR ANCIENS MURS TRÈS ABIMÉS
         </label>
         <ul>
           <li> Lessivage, ouverture des fissures </li>
@@ -111,13 +93,14 @@
           <li> Application d'une couche d'impression </li>
           <li> Application de deux couches de peinture acrylique </li>
         </ul>
+        <input type='number' step="0.1" id='s3' placeholder='Surface(en m2):' required='' style="display: none;">
       </div>
 
 
 
       <div class="checkbox">
         <label for ="4">
-          <input type="checkbox" id="4" value="checkbox4">TRAVAUX DE PEINTURE AVEC TOILES DE VERRE À PEINDRE
+          <input type="checkbox" id="4" value="4" onchange="ajoutSurfaces(this,'s4');">TRAVAUX DE PEINTURE AVEC TOILES DE VERRE À PEINDRE
         </label>
         <ul>
           <li> Lessivage, ouverture des fissures </li>
@@ -126,39 +109,45 @@
           <li> Application d'une couche d'impression </li>
           <li> Application de deux couches de peinture acrylique </li>
         </ul>
+        <input type='number' step="0.1" id='s4' placeholder='Surface(en m2):' required='' style="display: none;">
       </div>
 
 
 
       <div class="checkbox">
         <label for="5">
-          <input type="checkbox" id="5" value="checkbox5">
+          <input type="checkbox" id="5" value="5" onchange="ajoutSurfaces(this,'s5');">
           STUK
         </label>
+        <input type='number' step="0.1" id='s5' placeholder='Surface(en m2):' required='' style="display: none;">
+
       </div>
 
 
 
       <div class="checkbox">
         <label for="6">
-          <input type="checkbox" id="6" value="checkbox6">AREZZO SIMPLE
+          <input type="checkbox" id="6" value="6" onchange="ajoutSurfaces(this,'s6');">AREZZO SIMPLE
         </label>
+        <input type='number' step="0.1" id='s6' placeholder='Surface(en m2):' required='' style="display: none;">
       </div>
 
 
 
       <div class="checkbox">
         <label for="7">
-          <input type="checkbox" id="7" value="checkbox7">AREZZO EFFET BETON
+          <input type="checkbox" id="7" value="7" onchange="ajoutSurfaces(this,'s7');">AREZZO EFFET BETON
         </label>
+        <input type='number' step="0.1" id='s7' placeholder='Surface(en m2):' required='' style="display: none;">
       </div>
 
 
 
       <div class="checkbox">
         <label for="8">
-          <input type="checkbox" id="8" value="checkbox8">PEINTURE SUR PARPIN
+          <input type="checkbox" id="8" value="8" onchange="ajoutSurfaces(this,'s8');">PEINTURE SUR PARPIN
         </label>
+        <input type='number' step="0.1" id='s8' placeholder='Surface(en m2):' required='' style="display: none;">
       </div>
 
 
@@ -166,25 +155,29 @@
 
       <div class="checkbox">
         <label for="9">
-          <input type="checkbox" id="9" value="checkbox9">PEINTURE DES SOLS
+          <input type="checkbox" id="9" value="9" onchange="ajoutSurfaces(this,'s9');">PEINTURE DES SOLS
         </label>
+        <input type='number' step="0.1" id='s9' placeholder='Surface(en m2):' required='' style="display: none;">
       </div>
 
 
 
       <div class="checkbox">
         <label for ="10">
-          <input type="checkbox" id="10" value="checkbox10">PEINTURE SUR TAILLE DE VERRE DÉJA POSÉ
+          <input type="checkbox" id="10" value="10" onchange="ajoutSurfaces(this,'s10');">PEINTURE SUR TAILLE DE VERRE DÉJA POSÉ
         </label>
-      </div>
+        <input type='number' step="0.1" id='s10' placeholder='Surface(en m2):' required='' style="display: none;">
+        </div>
 
 
 
       <div class="checkbox">
         <label for ="11">
-          <input type="checkbox" id="11" value="checkbox11">
+          <input type="checkbox" id="11" value="11" onchange="ajoutSurfaces(this,'s11');">
             POSE BANDES FOURNITURE ET POSE
         </label>
+        <input type='number' step="0.1" id='s11' placeholder='Surface(en m2):' required='' style="display: none;">
+
       </div>
 
 
@@ -192,43 +185,49 @@
 
       <div class="checkbox">
         <label for="12">
-          <input type="checkbox" id="12" value="checkbox12">PARQUET
+          <input type="checkbox" id="12" value="12" onchange="ajoutSurfaces(this,'s12');">PARQUET
         </label>
         <ul>
           <li> PONÇAGE</li>
           <li> DEUX COUCHES VERNIS </li>
         </ul>
+        <input type='number' step="0.1" id='s12' placeholder='Surface(en m2):' required='' style="display: none;">
+
       </div>
 
 
 
       <div class="checkbox">
         <label for="13">
-          <input type="checkbox" id="13" value="checkbox13">PORTES
+          <input type="checkbox" id="13" value="13" onchange="ajoutSurfaces(this,'s13');">PORTES
         </label>
+        <input type='number' step="0.1" id='s13' placeholder='Surface(en m2):' required='' style="display: none;">
+
       </div>
 
 
 
       <div class="checkbox">
         <label for="14">
-          <input type="checkbox" id="14" value="checkbox14">FENÊTRES
+          <input type="checkbox" id="14" value="14" onchange="ajoutSurfaces(this,'s14');">FENÊTRES
         </label>
+        <input type='number' step="0.1" id='s14' placeholder='Surface(en m2):' required='' style="display: none;">
       </div>
 
 
 
       <div class="checkbox">
         <label for="15">
-          <input type="checkbox" id="15" value="checkbox1">RADIATEUR
+          <input type="checkbox" id="15" value="15" onchange="ajoutSurfaces(this,'s15');">RADIATEUR
         </label>
+        <input type='number' step="0.1" id='s15' placeholder='Surface (en m2):' required='' style="display: none;">
       </div>
 
 
 
       <div class="checkbox">
         <label for="16">
-          <input type="checkbox" id="16" value="checkbox1">TRAVAUX DE PEINTURE SUR FAÇADES EXTÈRIEURES
+          <input type="checkbox" id="16" value="16" onchange="ajoutSurfaces(this,'s16');">TRAVAUX DE PEINTURE SUR FAÇADES EXTÈRIEURES
         </label>
         <ul>
           <li> Carcher </li>
@@ -237,11 +236,38 @@
           <li> Rebouchage </li>
           <li> Deux couches peinture </li>
         </ul>
+        <input type='number' step="0.1" id='s16' placeholder='Surface(en m2):' required='' style="display: none;">
       </div>
+
 
       </div>
     </div>
-<footer>
+    <div class="container">
+      <div class="col-md-5">
+        <div class="form-area">
+          <form>
+            <br style="clear:both">
+            <h4 style="margin-bottom: 25px; text-align: center;"><i>Complétez le formulaire. Les champs marqués par </i><em>* </em> sont <em>obligatoires.</em></h4>
+            <div class="form-group">
+              <input class="form-control" id="name" name="name" placeholder="* Nom" required="" pattern="[A-Z]{24}">
+            </div>
+            <div class="form-group">
+              <input class="form-control" id="mail" name="mail" placeholder=" * Email" required="">
+            </div>
+            <div class="form-group">
+              <input class="form-control" id="mobile" name="mobile" placeholder="Numéro" required="">
+            </div>
+            <div class="col-md-7 center-block">
+              <button type="button" id="submit" name="submit" class="btn btn-primary pull-right" style="background-color: darkred" onclick="validation();">Envoyer</button>
+            </div>
+            </form>
+        </div>
+      </div>
+    </div>
+
+
+
+    <footer>
     <div class="container-fluid bg-primary">
         <div class="text-center center-block">
             <a href="https://www.facebook.com"><i id="fb" class="fa fa-facebook-square fa-5x social" aria-hidden="true"></i></a>
