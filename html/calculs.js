@@ -15,7 +15,7 @@ if ((document.getElementById('name').value=== "") || (document.getElementById('m
     document.getElementById('name').focus();
     return false;
 }
-if ( (!/^[a-zA-Z]*$/g.test(document.getElementById('name').value)) || (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g.test(document.getElementById('mail').value))) {
+if ( (!/^[a-zA-Z]+\s*\w*$/g.test(document.getElementById('name').value)) || (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g.test(document.getElementById('mail').value))){
     alert("Caractères invalides");
     document.getElementById('name').focus();
     return false;
@@ -189,9 +189,22 @@ if (selection.length===0) {
                    }
                  }
                   total=total+(surfaceTotal* 3);
+                  envoiMail(total);
 
           }
 
 
 
   }
+
+
+
+
+function envoiMail(t) {
+var link = document.getElementById('mail').value;
++ "&subject=" +"Devis Personnalisé"
++ "&body=" + " Le montant estimé est de :"+parseInt(t)+". Attention, ce devis est à titre indicatif et ne peut être en aucun cas considéré comme officiel. Pour plus d'informations veuillez contacter AMI DECO "
+;
+
+//window.location.href = link;
+}
