@@ -13,7 +13,6 @@
   <script src="../js/jquery.min.js"></script>
   <script src="../js/bootstrap.min.js"></script>
   <script type="text/javascript" src="calculs.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
@@ -60,7 +59,7 @@
           <li> Application d'une couche d'impression </li>
           <li> Application de deux couches de peinture acrylique </li>
           </ul>
-           <input type='number' step="0.1" id='s1' placeholder='Surface(en m2):' required='' style="display: none;">
+           <input type='number' min="0.1"step="0.1" id='s1'  placeholder='Surface(en m2):' required='' style="display: none;">
       </div>
 
 
@@ -248,6 +247,7 @@
           <form>
             <br style="clear:both">
             <h4 style="margin-bottom: 25px; text-align: center;"><i>Complétez le formulaire. Les champs marqués par </i><em>* </em> sont <em>obligatoires.</em></h4>
+            <h5 style="margin-bottom: 25px; text-align: center;"><i>Attention, la surface à indiquer est la surface à peindre. </i></h5>
             <div class="form-group">
               <input class="form-control" id="name" name="name" placeholder="* Nom" required="" pattern="[A-Z]{24}">
             </div>
