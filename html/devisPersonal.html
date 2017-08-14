@@ -17,7 +17,7 @@
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 <nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
+  <div class="container-fluid bg-danger">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
@@ -39,14 +39,14 @@
 </nav>
 
 <div class="jumbotron text-center">
-    <a href="homepage.html#about" class="btn btn-default btn-lg" style="background-color: transparent; color: white;border: transparent"><h1>AMI DECO</h1>
+    <a href="homepage.html#about" class="btn btn-default btn-lg" style="background-color: transparent; color: #0f0f0f;border: transparent"><h1>AMI DECO</h1>
         <p> Les spécialistes de la peinture </p>
     </a>
 </div>
 
 
 
-    <div class="container">
+    <div class="container-fluid">
       <div class="row">
       <legend> Travaux à faire </legend>
       <div class="checkbox">
@@ -59,7 +59,7 @@
           <li> Application d'une couche d'impression </li>
           <li> Application de deux couches de peinture acrylique </li>
           </ul>
-           <input type='number' min="0.1"step="0.1" id='s1'  placeholder='Surface(en m2):' required='' style="display: none;">
+           <input class="btn-default btn-lg" type='number' min="0.1"step="0.1" id='s1'  placeholder='Surface(en m2):' required='' style="display: none;">
       </div>
 
 
@@ -74,7 +74,7 @@
             <li> Rebouchage à l'enduit plâtre et pose de bandes Calicot </li>
             <li> Application de deux couches de peinture acrylique </li>
           </ul>
-          <input type='number' step="0.1" id='s2' placeholder='Surface(en m2):' required='' style="display: none;">
+          <input class="btn-default btn-lg" type='number' step="0.1" id='s2' placeholder='Surface(en m2):' required='' style="display: none;">
       </div>
 
 
@@ -92,7 +92,7 @@
           <li> Application d'une couche d'impression </li>
           <li> Application de deux couches de peinture acrylique </li>
         </ul>
-        <input type='number' step="0.1" id='s3' placeholder='Surface(en m2):' required='' style="display: none;">
+        <input class="btn-default btn-lg" type='number' step="0.1" id='s3' placeholder='Surface(en m2):' required='' style="display: none;">
       </div>
 
 
@@ -108,7 +108,7 @@
           <li> Application d'une couche d'impression </li>
           <li> Application de deux couches de peinture acrylique </li>
         </ul>
-        <input type='number' step="0.1" id='s4' placeholder='Surface(en m2):' required='' style="display: none;">
+        <input class="btn-default btn-lg" type='number' step="0.1" id='s4' placeholder='Surface(en m2):' required='' style="display: none;">
       </div>
 
 
@@ -118,7 +118,7 @@
           <input type="checkbox" id="5" value="5" onchange="ajoutSurfaces(this,'s5');">
           STUK
         </label>
-        <input type='number' step="0.1" id='s5' placeholder='Surface(en m2):' required='' style="display: none;">
+        <input class="btn-default btn-lg" type='number' step="0.1" id='s5' placeholder='Surface(en m2):' required='' style="display: none;">
 
       </div>
 
@@ -128,7 +128,7 @@
         <label for="6">
           <input type="checkbox" id="6" value="6" onchange="ajoutSurfaces(this,'s6');">AREZZO SIMPLE
         </label>
-        <input type='number' step="0.1" id='s6' placeholder='Surface(en m2):' required='' style="display: none;">
+        <input class="btn-default btn-lg" type='number' step="0.1" id='s6' placeholder='Surface(en m2):' required='' style="display: none;">
       </div>
 
 
@@ -137,7 +137,7 @@
         <label for="7">
           <input type="checkbox" id="7" value="7" onchange="ajoutSurfaces(this,'s7');">AREZZO EFFET BETON
         </label>
-        <input type='number' step="0.1" id='s7' placeholder='Surface(en m2):' required='' style="display: none;">
+        <input class="btn-default btn-lg" type='number' step="0.1" id='s7' placeholder='Surface(en m2):' required='' style="display: none;">
       </div>
 
 
@@ -146,7 +146,7 @@
         <label for="8">
           <input type="checkbox" id="8" value="8" onchange="ajoutSurfaces(this,'s8');">PEINTURE SUR PARPIN
         </label>
-        <input type='number' step="0.1" id='s8' placeholder='Surface(en m2):' required='' style="display: none;">
+        <input class="btn-default btn-lg" type='number' step="0.1" id='s8' placeholder='Surface(en m2):' required='' style="display: none;">
       </div>
 
 
@@ -156,7 +156,7 @@
         <label for="9">
           <input type="checkbox" id="9" value="9" onchange="ajoutSurfaces(this,'s9');">PEINTURE DES SOLS
         </label>
-        <input type='number' step="0.1" id='s9' placeholder='Surface(en m2):' required='' style="display: none;">
+        <input class="btn-default btn-lg" type='number' step="0.1" id='s9' placeholder='Surface(en m2):' required='' style="display: none;">
       </div>
 
 
@@ -165,7 +165,7 @@
         <label for ="10">
           <input type="checkbox" id="10" value="10" onchange="ajoutSurfaces(this,'s10');">PEINTURE SUR TAILLE DE VERRE DÉJA POSÉ
         </label>
-        <input type='number' step="0.1" id='s10' placeholder='Surface(en m2):' required='' style="display: none;">
+        <input class="btn-default btn-lg" type='number' step="0.1" id='s10' placeholder='Surface(en m2):' required='' style="display: none;">
         </div>
 
 
@@ -175,7 +175,7 @@
           <input type="checkbox" id="11" value="11" onchange="ajoutSurfaces(this,'s11');">
             POSE BANDES FOURNITURE ET POSE
         </label>
-        <input type='number' step="0.1" id='s11' placeholder='Surface(en m2):' required='' style="display: none;">
+        <input class="btn-default btn-lg" type='number' step="0.1" id='s11' placeholder='Surface(en m2):' required='' style="display: none;">
 
       </div>
 
@@ -190,7 +190,7 @@
           <li> PONÇAGE</li>
           <li> DEUX COUCHES VERNIS </li>
         </ul>
-        <input type='number' step="0.1" id='s12' placeholder='Surface(en m2):' required='' style="display: none;">
+        <input class="btn-default btn-lg" type='number' step="0.1" id='s12' placeholder='Surface(en m2):' required='' style="display: none;">
 
       </div>
 
@@ -200,7 +200,7 @@
         <label for="13">
           <input type="checkbox" id="13" value="13" onchange="ajoutSurfaces(this,'s13');">PORTES
         </label>
-        <input type='number' step="0.1" id='s13' placeholder='Surface(en m2):' required='' style="display: none;">
+        <input class="btn-default btn-lg" type='number' step="0.1" id='s13' placeholder='Surface(en m2):' required='' style="display: none;">
 
       </div>
 
@@ -210,7 +210,7 @@
         <label for="14">
           <input type="checkbox" id="14" value="14" onchange="ajoutSurfaces(this,'s14');">FENÊTRES
         </label>
-        <input type='number' step="0.1" id='s14' placeholder='Surface(en m2):' required='' style="display: none;">
+        <input class="btn-default btn-lg" type='number' step="0.1" id='s14' placeholder='Surface(en m2):' required='' style="display: none;">
       </div>
 
 
@@ -219,7 +219,7 @@
         <label for="15">
           <input type="checkbox" id="15" value="15" onchange="ajoutSurfaces(this,'s15');">RADIATEUR
         </label>
-        <input type='number' step="0.1" id='s15' placeholder='Surface (en m2):' required='' style="display: none;">
+        <input class="btn-default btn-lg" type='number' step="0.1" id='s15' placeholder='Surface (en m2):' required='' style="display: none;">
       </div>
 
 
@@ -235,13 +235,13 @@
           <li> Rebouchage </li>
           <li> Deux couches peinture </li>
         </ul>
-        <input type='number' step="0.1" id='s16' placeholder='Surface(en m2):' required='' style="display: none;">
+        <input class="btn-default btn-lg" type='number' step="0.1" id='s16' placeholder='Surface(en m2):' required='' style="display: none;">
       </div>
 
 
       </div>
     </div>
-    <div class="container">
+    <div class="container-fluid">
       <div class="col-md-5">
         <div class="form-area">
           <form>
@@ -258,7 +258,7 @@
               <input class="form-control" id="mobile" name="mobile" placeholder="Numéro" required="">
             </div>
             <div class="col-md-7 center-block">
-              <button type="button" id="submit" name="submit" class="btn btn-primary pull-right" style="background-color: darkred" onclick="validation();">Envoyer</button>
+              <button type="button" id="submit" name="submit" class="btn btn-primary pull-right" style="background-color: #8a6d3b" onclick="validation();">Envoyer</button>
             </div>
             </form>
         </div>
