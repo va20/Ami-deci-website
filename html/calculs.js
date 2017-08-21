@@ -217,11 +217,15 @@ if (selection.length===0) {
 
 
 
-function envoiMail(t) {
-var link = document.getElementById('mail').value;
-+ "&subject=" +"Devis Personnalisé"
-+ "&body=" + " Le montant estimé est de :"+parseInt(t)+". Attention, ce devis est à titre indicatif et ne peut être en aucun cas considéré comme officiel. Pour plus d'informations veuillez contacter AMI DECO "
-;
+function envoiMail(t,m) {
+
+  Email.send("as.technology@outlook.fr",
+  document.getElementById('mail').value,
+ "Devis Personnalisé",
+"Le montant estimé est de "+parseInt(t)+"€. Attention, ce devis est à titre indicatif et ne peut être en aucun cas considéré comme officiel. Pour plus d'informations veuillez contacter AMI DECO ",
+"Smtp.live.com",
+ {token:"7d3a481c-30f5-46bd-bd6f-2feab4d14a64"});
+
 
 //window.location.href = link;
   //alert("Mail envoyé");
