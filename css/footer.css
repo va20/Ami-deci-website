@@ -12,21 +12,21 @@
     -webkit-transition-duration: 0.5s;
     -moz-transition-duration: 0.5s;
     -o-transition-duration: 0.5s;
-    color: #0f0f0f;
+    color: #8a6d3b;
 }
 
-.bg-primary{
-    background-color: #818181;
+.container-fluid.bg-primary{
+    background-color: #faebcc;
 }
 #fb:hover {
-    color: darkred;
+    color: saddlebrown;
 }
 #social-tw:hover {
-    color: darkred;
+    color: saddlebrown;
 }
 #social-gp:hover {
-    color: darkred;
+    color: saddlebrown;
 }
 #social-em:hover {
-    color: darkred;
+    color: saddlebrown;
 }
