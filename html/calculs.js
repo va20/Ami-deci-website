@@ -219,20 +219,13 @@ if (selection.length===0) {
 
 function envoiMail(t,m) {
 
-<<<<<<< HEAD
+
   Email.send("saifali.ham@gmail.com",
   document.getElementById('mail').value,
  "Devis Personnalisé",
 "Le montant estimé est de "+parseInt(t)+"€. Attention, ce devis est à titre indicatif et ne peut être en aucun cas considéré comme officiel. Pour plus d'informations veuillez contacter AMI DECO ",
  {token:"1fa5168b-db3e-46e9-b5d9-3319bd92b470"})
-=======
-  Email.send("ami.deco2@gmail.com",
-  document.getElementById('mail').value,
- "Devis Personnalisé",
-"Le montant estimé est de "+parseInt(t)+"€. Attention, ce devis est à titre indicatif et ne peut être en aucun cas considéré comme officiel. Pour plus d'informations veuillez contacter AMI DECO ",
-"smtp@gmail.com",
- {token:"2c15274f-489f-44b7-8744-57f302884d35"});
->>>>>>> 8c4ce462ebb70e0106909f2409bd12cf10accee7
+
 
 
 //window.location.href = link;
