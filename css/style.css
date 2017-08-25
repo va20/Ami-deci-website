@@ -21,8 +21,11 @@ h4 {
     background-color: #faebcc;
     color: #0f0f0f;
     padding: 100px 25px;
+}
+
+.jumbotron @font-face {
     font-family: "Caesar Dressing", sans-serif;
-    src:url('ftp://amidecoovn@ftp.cluster023.hosting.ovh.net/www/fonts/CaesarDressing-Regular.ttf');
+    src:url(http://amideco.org/fonts/CaesarDressing-Regular.ttf);
 }
 
 .container-fluid {
