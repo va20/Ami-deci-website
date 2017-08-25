@@ -112,7 +112,7 @@
         <div class="row">
             <div class="col-sm-5">
                 <label>
-                    Surface à peindre(en m2): <input class="btn-default btn-lg" type="text" onkeypress='return event.charCode >= 48 && event.charCode <= 57' id="num" placeholder="123"  required="">
+                    Surface à peindre(en m2): <input class="btn-default btn-lg" type="number" id="num" placeholder="123"  required="">
 
                 </label>
             </div>
@@ -137,7 +137,7 @@
                         var ips = document.getElementsByTagName('input');
                         ipsL = ips.length;
 
-                        if(surface.length===0){
+                        if(surface.length===0 || (!/^[1-9][0-9]*$/g.test(surface))){
                             alert('Veuillez indiquer une surface!');
                         }
 
