@@ -219,12 +219,11 @@ if (selection.length===0) {
 
 function envoiMail(t,m) {
 
-  Email.send("as.technology@outlook.fr",
+  Email.send("saifali.ham@gmail.com",
   document.getElementById('mail').value,
  "Devis Personnalisé",
 "Le montant estimé est de "+parseInt(t)+"€. Attention, ce devis est à titre indicatif et ne peut être en aucun cas considéré comme officiel. Pour plus d'informations veuillez contacter AMI DECO ",
-"Smtp.live.com",
- {token:"7d3a481c-30f5-46bd-bd6f-2feab4d14a64"});
+ {token:"1fa5168b-db3e-46e9-b5d9-3319bd92b470"})
 
 
 //window.location.href = link;
