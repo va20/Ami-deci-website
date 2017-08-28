@@ -22,10 +22,16 @@ h4 {
     color: #0f0f0f;
     padding: 100px 25px;
 }
-
-.jumbotron @font-face {
+ @font-face {
     font-family: "Caesar Dressing", sans-serif;
     src:url(http://amideco.org/fonts/CaesarDressing-Regular.ttf);
+    src: url(http://amideco.org/fonts/CaesarDressing-Regular.eot);
+    src: url(http://amideco.org/fonts/CaesarDressing-Regular.eot?#iefix) format('embedded-opentype'),
+    url(http://amideco.org/fonts/CaesarDressing-Regular.woff) format('woff'),
+    url(http://amideco.org/fonts/CaesarDressing-Regular.ttf) format('truetype'),
+    url(http://amideco.org/fonts/CaesarDressing-Regular.svg#sansationregular) format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
 .container-fluid {
