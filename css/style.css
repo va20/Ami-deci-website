@@ -34,6 +34,12 @@ h4 {
     font-style: normal;
 }
 
+@media screen and (max-device-width:770px ){
+    nav.navbar-fixed-top{
+        position: relative;
+
+    }
+}
 .container-fluid {
     padding: 60px 50px;
     background-color: #FFFAF0;
