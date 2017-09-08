@@ -209,9 +209,6 @@ if (selection.length===0) {
           }
           envoiMail(total);
 
-
-
-
   }
 
 
