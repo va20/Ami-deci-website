@@ -207,26 +207,29 @@ if (selection.length===0) {
                   total=total+(surfaceTotal* 3);
 
           }
-          envoiMail(total);
+    $(document).ready(function () {
 
+        $('#submit').click(function () {
+            $.ajax({
+                type: "POST",
+                url: "mail.php",
+                data: total,
+                cache: false,
+                contentType: false,
+                processData: false,
+                success:  function(data){
+                    alert("Un email vient d'etre envoyé à votre adresse avec les details.");
+                    //window.location.reload(true);
+                }
+            });
+        });
+    });
   }
 
 
 
 
-function envoiMail(t,m) {
-
-
-  Email.send("amidecotest@outlook.fr",
-  document.getElementById('mail').value,
- "Devis Personnalisé",
-"Le montant estimé est de "+parseInt(t)+"€. Attention, ce devis est à titre indicatif et ne peut être en aucun cas considéré comme officiel. Pour plus d'informations veuillez contacter AMI DECO ",
-"Smtp.live.com",
-"amidecotest@outlook.fr",
-"Amiami9292")
-
 
 
 //window.location.href = link;
   //alert("Mail envoyé");
-}

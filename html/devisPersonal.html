@@ -246,12 +246,12 @@
     <div class="container-fluid">
       <div class="col-md-5">
         <div class="form-area">
-          <form action="mail.php" method="post">
+          <form action="mail.php" method="POST" role="form">
             <br style="clear:both">
             <h4 style="margin-bottom: 25px; text-align: center;"><i>Complétez le formulaire. Les champs marqués par </i><em>* </em> sont <em>obligatoires.</em></h4>
             <h5 style="margin-bottom: 25px; text-align: center;"><i>Attention, la surface à indiquer est la surface à peindre. </i></h5>
             <div class="form-group">
-              <input class="form-control" id="name" name="name" placeholder="* Nom" required="" pattern="[A-Z]*[a-z]">
+              <input class="form-control" id="name" name="name" placeholder="* Nom" required="">
             </div>
             <div class="form-group">
               <input class="form-control" id="mail" name="mail" placeholder=" * Email" required="">
@@ -260,7 +260,7 @@
               <input class="form-control" id="mobile" name="mobile" placeholder="Numéro" required="">
             </div>
             <div class="col-md-7 center-block">
-              <input type="submit" value="Envoyer" class="btn btn-primary pull-right" style="background-color: #8a6d3b"/>
+              <button type="submit" id="submit" name="submit" value="Envoyer" class="btn btn-primary pull-right" onclick="validation()" style="background-color: #8a6d3b">Envoyer</button>
             </div>
             </form>
         </div>
