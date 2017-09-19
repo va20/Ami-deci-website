@@ -3,8 +3,7 @@ $redirect="http://localhost:63342/ami-decoration/html/mail.php";
 $client_id="690912620362-tq8bu8brs4o4fhstv0g6qp0hkqe3e5ec.apps.googleusercontent.com";
 $client_secret="8qwmFH5Wp_-DS4a8hL6mgEJK";
 $postdata = file_get_contents("php://input");
-echo $postdata;
-
+echo $_POST['name'];
 echo $_POST['total'];
 $data=array();
 parse_str($postdata,$data);
@@ -39,18 +38,18 @@ require '../PHPMailer-6.0/src/SMTP.php';
 $mail = new PHPMailer(true);
 try {
     //Server settings
-    $mail->SMTPDebug = 0;                                 // Enable verbose debug output
+    $mail->SMTPDebug = 2;                                 // Enable verbose debug output
     $mail->CharSet='UTF-8';
     $mail->isSMTP();                                      // Set mailer to use SMTP
-    $mail->Host = 'smtp.gmail.com;smtp2.gmail.com';  // Specify main and backup SMTP servers
+    $mail->Host = 'tls://smtp.gmail.com:587';  // Specify main and backup SMTP servers
     $mail->SMTPAuth = true;                               // Enable SMTP authentication
-    $mail->Username = 'saifali.ham@gmail.com';                 // SMTP username
-    $mail->Password = 'D!Dr0t11!nf011';                           // SMTP password
+    $mail->Username = 'ami.deco.send@gmail.com';                 // SMTP username
+    $mail->Password = 'N0uveauC0mpte';                           // SMTP password
     $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
     $mail->Port = 587;                                    // TCP port to connect to
 
     //Recipients
-    $mail->setFrom('saifali.ham@gamil.com', 'AMI DECO');
+    $mail->setFrom('ami.deco.send@gmail.com', 'AMI DECO');
     $mail->addAddress($mailto,$name);     // Add a recipient
     $mail->addAddress($mailto);               // Name is optional
     //$mail->addReplyTo('info@example.com', 'Information');
